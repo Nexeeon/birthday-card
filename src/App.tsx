@@ -31,49 +31,49 @@ yaudah maaf menggangu waktunya dan juga ambil fotonya yang sembarangan 😓
 sekali lagi happy sweet seventeen ya wish you all the best.`,
   messages = [
     {
-      from: "Mom & Dad",
+      from: "",
       message:
         "Happy birthday to our amazing daughter! We are so proud of the person you've become. May this year bring you endless joy and success. Love you always! 💕",
       photo: "gambar1.jpeg",
     },
     {
-      from: "Best Friends",
+      from: "",
       message:
         "To the most incredible friend! Thank you for all the laughs, adventures, and unforgettable memories. Here's to many more years of friendship! 🎉",
       photo: "gambar2.jpeg",
     },
     {
-      from: "Your Sister",
+      from: "",
       message:
         "Happy birthday to my favorite sister! You inspire me every day. Wishing you all the happiness in the world. Can't wait to celebrate with you! 🎂",
       photo: "gambar3.jpeg",
     },
     {
-      from: "Colleagues",
+      from: "",
       message:
         "Wishing you a wonderful birthday! Your dedication and positive energy make our workplace amazing. Enjoy your special day! 🎊",
       photo: "gambar4.jpeg",
     },
     {
-      from: "Childhood Friends",
+      from: "",
       message:
         "From playground adventures to lifelong memories! Wishing you the happiest of birthdays! 🎈",
       photo: "gambar5.jpeg",
     },
     {
-      from: "School Mates",
+      from: "",
       message:
         "Happy birthday! May your day be filled with joy and wonderful surprises! 🎁",
       photo: "gambar6.jpeg",
     },
     {
-      from: "Cousins",
+      from: "",
       message:
         "Family love forever! Wishing you a fantastic birthday celebration! 🥳",
       photo: "gambar7.jpeg",
     },
     {
-      from: "Neighbors",
+      from: "",
       message:
         "Happy birthday from your neighbors! May your day be as wonderful as you are! 🌟",
       photo: "gambar8.jpeg",
