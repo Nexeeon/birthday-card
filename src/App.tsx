@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface Message {
   from: string;
-  message: string;
+  message?: string;
   photo: string;
 }
 
@@ -387,6 +387,10 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                               src={messages[0].photo}
                               alt={`Foto dari ${messages[0].from}`}
                               className="w-full h-full object-cover"
+                              onError={(e) => {
+                                const img = e.target as HTMLImageElement;
+                                img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23ccc" width="100" height="100"/%3E%3C/svg%3E';
+                              }}
                             />
                           </div>
                         </div>
@@ -729,21 +733,19 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
               </div>
 
               {/* Framed Photo */}
-              <div
-                className={`bg-gradient-to-br ${zoomedPhoto.frameColor} rounded-2xl md:rounded-3xl shadow-2xl p-4 md:p-6 relative overflow-hidden`}
-              >
-                <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-inner">
-                  <motion.img
-                    src={zoomedPhoto.photo}
-                    alt={`Foto dari ${zoomedPhoto.from}`}
-                    className="w-full h-auto max-h-[70vh] md:max-h-[80vh] object-contain cursor-zoom-out"
-                    initial={{ scale: 0.9 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.1, type: "spring" }}
-                    onClick={() => setZoomedPhoto(null)}
-                  />
-                </div>
-              </div>
+              <motion.img
+                src={zoomedPhoto.photo}
+                alt={`Foto dari ${zoomedPhoto.from}`}
+                className="w-full h-auto max-h-[70vh] md:max-h-[80vh] object-contain cursor-zoom-out"
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.1, type: "spring" }}
+                onClick={() => setZoomedPhoto(null)}
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement;
+                  img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23ccc" width="100" height="100"/%3E%3Ctext x="50" y="50" font-size="14" fill="%23999" text-anchor="middle" dominant-baseline="middle"%3ENo Image%3C/text%3E%3C/svg%3E';
+                }}
+              />
 
               {/* Zoom hint */}
               <motion.p
