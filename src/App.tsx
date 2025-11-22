@@ -824,64 +824,25 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
               )}
             </AnimatePresence>
 
-            {/* Tulisan "kapan yah kita mabar lagi" - SUPER TRANSPARAN sampai semi tidak terlihat */}
+            {/* SATU-SATUNYA Tulisan "kapan yah kita mabar lagi" - SUPER TRANSPARAN */}
             <AnimatePresence>
               {showPhotos && !isMobile && (
-                <>
-                  {/* Posisi 1: Di atas envelope - HAMPIR TIDAK TERLIHAT */}
-                  <motion.div
-                    className="absolute bottom-16 left-1/2 transform -translate-x-1/2 cursor-pointer group"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.3, duration: 0.8 }}
-                    whileHover={{
-                      scale: 1.05,
-                      opacity: 0.8,
-                    }}
-                  >
-                    <div className="bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full border border-gray-300/10 shadow-sm">
-                      <p className="text-xs font-light text-gray-500/40 text-center whitespace-nowrap group-hover:text-gray-600/70 transition-colors duration-300">
-                        kapan yah kita mabar lagi? 🎮
-                      </p>
-                    </div>
-                  </motion.div>
-
-                  {/* Posisi 2: Di kanan bawah meja - EXTREMELY TRANSPARENT */}
-                  <motion.div
-                    className="absolute right-6 bottom-6 cursor-pointer group"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.5, duration: 0.8 }}
-                    whileHover={{
-                      scale: 1.03,
-                      opacity: 0.6,
-                    }}
-                  >
-                    <div className="bg-white/3 backdrop-blur-xs px-2 py-1 rounded-full border border-gray-300/5">
-                      <p className="text-xs font-extralight text-gray-400/30 text-center whitespace-nowrap group-hover:text-gray-500/50 transition-colors duration-300">
-                        kapan yah kita mabar lagi? 🎮
-                      </p>
-                    </div>
-                  </motion.div>
-
-                  {/* Posisi 3: Floating di tengah atas - ALMOST INVISIBLE */}
-                  <motion.div
-                    className="absolute top-8 left-1/2 transform -translate-x-1/2 cursor-pointer group"
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.7, duration: 0.8 }}
-                    whileHover={{
-                      scale: 1.02,
-                      opacity: 0.5,
-                    }}
-                  >
-                    <div className="bg-white/2 backdrop-blur-xs px-2 py-1 rounded-full">
-                      <p className="text-xs font-thin text-gray-400/25 text-center whitespace-nowrap group-hover:text-gray-500/40 transition-colors duration-300">
-                        kapan yah kita mabar lagi? 🎮
-                      </p>
-                    </div>
-                  </motion.div>
-                </>
+                <motion.div
+                  className="absolute bottom-16 left-1/2 transform -translate-x-1/2 cursor-pointer group"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.3, duration: 0.8 }}
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 0.8,
+                  }}
+                >
+                  <div className="bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full border border-gray-300/10 shadow-sm">
+                    <p className="text-xs font-light text-gray-500/40 text-center whitespace-nowrap group-hover:text-gray-600/70 transition-colors duration-300">
+                      kapan yah kita mabar lagi? 🎮
+                    </p>
+                  </div>
+                </motion.div>
               )}
             </AnimatePresence>
           </div>
