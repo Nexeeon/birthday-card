@@ -742,13 +742,31 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Tulisan "kapan ya kita mabar lagi?" - subtle effect di desktop saja */}
+            <AnimatePresence>
+              {showPhotos && !isMobile && (
+                <motion.div
+                  className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 group"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.5, duration: 1 }}
+                >
+                  <div className="bg-white/20 hover:bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-100/30 transition-all duration-500 group-hover:scale-105 group-hover:shadow-md">
+                    <p className="text-sm font-normal text-gray-400 group-hover:text-gray-700 text-center whitespace-nowrap transition-colors duration-500">
+                      kapan ya kita mabar lagi? 🎮
+                    </p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Instruction for photos - only show after photos appear */}
           <AnimatePresence>
             {showPhotos && (
               <motion.div
-                className="absolute top-4 md:top-8 left-1/2 transform -translate-x-1/2"
+                className="absolute top-20 md:top-24 left-1/2 transform -translate-x-1/2"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
