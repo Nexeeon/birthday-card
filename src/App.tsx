@@ -135,7 +135,94 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center p-4 md:p-8 perspective-1000 overflow-hidden relative">
-      {/* Stars - only show after candles are out */}
+      {/* Desktop-only Celestial Elements - Hanya muncul setelah foto muncul */}
+      <AnimatePresence>
+        {showPhotos && !isMobile && (
+          <>
+            {/* Big Moon */}
+            <motion.div
+              className="absolute left-16 top-20"
+              initial={{ opacity: 0, scale: 0, x: -100 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 2, type: "spring", stiffness: 100 }}
+            >
+              <div className="text-6xl">🌕</div>
+            </motion.div>
+
+            {/* Shooting Star */}
+            <motion.div
+              className="absolute right-32 top-16"
+              initial={{ opacity: 0, x: 100, y: -50 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ delay: 2.3, type: "spring" }}
+            >
+              <div className="text-4xl">🌠</div>
+            </motion.div>
+
+            {/* Saturn Planet */}
+            <motion.div
+              className="absolute left-24 bottom-32"
+              initial={{ opacity: 0, scale: 0, y: 100 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 2.6, type: "spring" }}
+            >
+              <div className="text-5xl">🪐</div>
+            </motion.div>
+
+            {/* Stars Constellation */}
+            <motion.div
+              className="absolute right-20 bottom-24"
+              initial={{ opacity: 0, rotate: 180 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={{ delay: 2.9, type: "spring" }}
+            >
+              <div className="text-4xl">✨</div>
+            </motion.div>
+
+            {/* Cloud 1 */}
+            <motion.div
+              className="absolute left-40 top-32"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 3.2 }}
+            >
+              <div className="text-3xl">☁️</div>
+            </motion.div>
+
+            {/* Cloud 2 */}
+            <motion.div
+              className="absolute right-40 bottom-40"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 3.5 }}
+            >
+              <div className="text-2xl">☁️</div>
+            </motion.div>
+
+            {/* Sparkles */}
+            <motion.div
+              className="absolute left-32 top-1/2"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 3.8, type: "spring" }}
+            >
+              <div className="text-3xl">🌟</div>
+            </motion.div>
+
+            {/* Rocket */}
+            <motion.div
+              className="absolute right-32 top-1/3"
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 4.1, type: "spring" }}
+            >
+              <div className="text-4xl">🚀</div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Stars Background - only show after candles are out */}
       <AnimatePresence>
         {showPhotos && (
           <>
@@ -732,32 +819,69 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                     >
                       ❤️
                     </div>
-                    {/* Petunjuk untuk mobile */}
-                    {isMobile && (
-                      <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-white/80 text-center whitespace-nowrap">
-                        Baca pesan
-                      </div>
-                    )}
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
 
-            {/* Tulisan "kapan ya kita mabar lagi?" - subtle effect di desktop saja */}
+            {/* Tulisan "kapan yah kita mabar lagi" - SUPER TRANSPARAN sampai semi tidak terlihat */}
             <AnimatePresence>
               {showPhotos && !isMobile && (
-                <motion.div
-                  className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 group"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.5, duration: 1 }}
-                >
-                  <div className="bg-white/20 hover:bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-100/30 transition-all duration-500 group-hover:scale-105 group-hover:shadow-md">
-                    <p className="text-sm font-normal text-gray-400 group-hover:text-gray-700 text-center whitespace-nowrap transition-colors duration-500">
-                      kapan ya kita mabar lagi? 🎮
-                    </p>
-                  </div>
-                </motion.div>
+                <>
+                  {/* Posisi 1: Di atas envelope - HAMPIR TIDAK TERLIHAT */}
+                  <motion.div
+                    className="absolute bottom-16 left-1/2 transform -translate-x-1/2 cursor-pointer group"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.3, duration: 0.8 }}
+                    whileHover={{
+                      scale: 1.05,
+                      opacity: 0.8,
+                    }}
+                  >
+                    <div className="bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full border border-gray-300/10 shadow-sm">
+                      <p className="text-xs font-light text-gray-500/40 text-center whitespace-nowrap group-hover:text-gray-600/70 transition-colors duration-300">
+                        kapan yah kita mabar lagi? 🎮
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Posisi 2: Di kanan bawah meja - EXTREMELY TRANSPARENT */}
+                  <motion.div
+                    className="absolute right-6 bottom-6 cursor-pointer group"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.5, duration: 0.8 }}
+                    whileHover={{
+                      scale: 1.03,
+                      opacity: 0.6,
+                    }}
+                  >
+                    <div className="bg-white/3 backdrop-blur-xs px-2 py-1 rounded-full border border-gray-300/5">
+                      <p className="text-xs font-extralight text-gray-400/30 text-center whitespace-nowrap group-hover:text-gray-500/50 transition-colors duration-300">
+                        kapan yah kita mabar lagi? 🎮
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Posisi 3: Floating di tengah atas - ALMOST INVISIBLE */}
+                  <motion.div
+                    className="absolute top-8 left-1/2 transform -translate-x-1/2 cursor-pointer group"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.7, duration: 0.8 }}
+                    whileHover={{
+                      scale: 1.02,
+                      opacity: 0.5,
+                    }}
+                  >
+                    <div className="bg-white/2 backdrop-blur-xs px-2 py-1 rounded-full">
+                      <p className="text-xs font-thin text-gray-400/25 text-center whitespace-nowrap group-hover:text-gray-500/40 transition-colors duration-300">
+                        kapan yah kita mabar lagi? 🎮
+                      </p>
+                    </div>
+                  </motion.div>
+                </>
               )}
             </AnimatePresence>
           </div>
