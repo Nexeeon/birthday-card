@@ -28,7 +28,10 @@ emm maaf ya jika bentuknya jelek karna ini baru pertama kali bikin desain gini k
 mungkin next time aku bikin lebih bagus lagi.
 ehh sekali lagi maaf ya kebanyakan yapping karna pengen banyak tanya tapi takutnya kamunya risih aja.
 yaudah maaf menggangu waktunya dan juga ambil fotonya yang sembarangan 😓
-sekali lagi happy sweet seventeen ya wish you all the best.`,
+sekali lagi happy sweet seventeen ya wish you all the best.
+
+*tambahan 
+sebenarnya sih ini dari tahun lalu ya, aku mau ngajak kamu ramein natal di GPDI AO, kalau kamu gak sibuk datang ya! natalnya tanggal 30 November 2025.`,
   messages = [
     {
       from: "",
@@ -135,7 +138,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center p-4 md:p-8 perspective-1000 overflow-hidden relative">
-      {/* Stars Background - simple stars */}
+      {/* Stars Background */}
       <AnimatePresence>
         {showPhotos && (
           <>
@@ -161,7 +164,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
       </AnimatePresence>
 
       <div className="relative w-full max-w-6xl">
-        {/* Table Surface dengan dekorasi tambahan */}
+        {/* Table Surface */}
         <motion.div
           className="relative w-full h-[400px] md:h-[600px] rounded-2xl md:rounded-3xl shadow-2xl transform-gpu overflow-hidden"
           initial={{
@@ -182,7 +185,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
             transform: isMobile ? "rotateX(5deg)" : "rotateX(8deg)",
           }}
         >
-          {/* Enhanced Wood grain texture */}
+          {/* Wood grain texture */}
           <div className="absolute inset-0 opacity-20">
             <div
               className="w-full h-full bg-gradient-to-br from-amber-800 via-amber-700 to-amber-900"
@@ -192,7 +195,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
             />
           </div>
 
-          {/* Table edge decoration */}
+          {/* Table edges */}
           <div className="absolute top-0 left-0 right-0 h-4 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 rounded-t-2xl md:rounded-t-3xl" />
           <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 rounded-b-2xl md:rounded-b-3xl" />
           <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-b from-amber-600 via-amber-500 to-amber-600 rounded-l-2xl md:rounded-l-3xl" />
@@ -204,28 +207,23 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
           <div className="absolute bottom-2 left-2 w-6 h-6 bg-amber-400 rounded-full opacity-60" />
           <div className="absolute bottom-2 right-2 w-6 h-6 bg-amber-400 rounded-full opacity-60" />
 
-          {/* Dekorasi tambahan di dalam meja - hanya desktop */}
+          {/* Desktop decorations */}
           {!isMobile && showPhotos && (
             <>
-              {/* Pattern dekorasi di sudut-sudut meja */}
               <div className="absolute top-6 left-6 w-8 h-8 border-2 border-amber-300/30 rounded-lg rotate-45" />
               <div className="absolute top-6 right-6 w-8 h-8 border-2 border-amber-300/30 rounded-lg rotate-45" />
               <div className="absolute bottom-6 left-6 w-8 h-8 border-2 border-amber-300/30 rounded-lg rotate-45" />
               <div className="absolute bottom-6 right-6 w-8 h-8 border-2 border-amber-300/30 rounded-lg rotate-45" />
 
-              {/* Garis dekoratif di tengah meja */}
               <div className="absolute top-1/2 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-amber-300/20 to-transparent" />
               <div className="absolute left-1/2 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-amber-300/20 to-transparent" />
 
-              {/* Titik-titik dekoratif */}
               <div className="absolute top-12 left-12 w-2 h-2 bg-amber-400/40 rounded-full" />
               <div className="absolute top-12 right-12 w-2 h-2 bg-amber-400/40 rounded-full" />
               <div className="absolute bottom-12 left-12 w-2 h-2 bg-amber-400/40 rounded-full" />
               <div className="absolute bottom-12 right-12 w-2 h-2 bg-amber-400/40 rounded-full" />
 
-              {/* DEKORASI BONEKA DAN HADIAH - HANYA DESKTOP */}
-
-              {/* Boneka Teddy Bear di kiri bawah */}
+              {/* Teddy Bear */}
               <motion.div
                 className="absolute left-8 bottom-8 z-20"
                 initial={{ opacity: 0, scale: 0, y: 20 }}
@@ -233,32 +231,18 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 transition={{ delay: 1.2 }}
               >
                 <div className="relative">
-                  {/* Body */}
-                  <div className="w-16 h-20 bg-brown-600 rounded-full relative">
-                    <div className="absolute w-16 h-20 bg-gradient-to-b from-amber-700 to-amber-800 rounded-full shadow-lg" />
-
-                    {/* Head */}
+                  <div className="w-16 h-20 bg-gradient-to-b from-amber-700 to-amber-800 rounded-full relative">
                     <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-b from-amber-600 to-amber-700 rounded-full" />
-
-                    {/* Ears */}
                     <div className="absolute -top-8 -left-1 w-6 h-6 bg-amber-700 rounded-full" />
                     <div className="absolute -top-8 -right-1 w-6 h-6 bg-amber-700 rounded-full" />
-
-                    {/* Face */}
                     <div className="absolute -top-2 left-3 w-3 h-3 bg-black rounded-full" />
                     <div className="absolute -top-2 right-3 w-3 h-3 bg-black rounded-full" />
                     <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-pink-400 rounded-full" />
-
-                    {/* Arms */}
                     <div className="absolute top-4 -left-2 w-4 h-8 bg-amber-700 rounded-full" />
                     <div className="absolute top-4 -right-2 w-4 h-8 bg-amber-700 rounded-full" />
-
-                    {/* Legs */}
                     <div className="absolute bottom-2 left-4 w-5 h-6 bg-amber-800 rounded-full" />
                     <div className="absolute bottom-2 right-4 w-5 h-6 bg-amber-800 rounded-full" />
                   </div>
-
-                  {/* Heart */}
                   <motion.div
                     className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full transform rotate-45"
                     animate={{ scale: [1, 1.2, 1] }}
@@ -269,7 +253,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 </div>
               </motion.div>
 
-              {/* Hadiah/kotak kado di kanan bawah */}
+              {/* Gift Box */}
               <motion.div
                 className="absolute right-12 bottom-10 z-20"
                 initial={{ opacity: 0, scale: 0, y: 20 }}
@@ -277,26 +261,20 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 transition={{ delay: 1.4 }}
               >
                 <div className="relative">
-                  {/* Box */}
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg shadow-lg relative">
-                    {/* Ribbon */}
                     <div className="absolute top-1/2 left-0 right-0 h-3 bg-pink-400 transform -translate-y-1/2" />
                     <div className="absolute left-1/2 top-0 bottom-0 w-3 bg-pink-400 transform -translate-x-1/2" />
-
-                    {/* Bow */}
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                       <div className="w-6 h-4 bg-pink-400 rounded-full" />
                       <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-pink-400 rounded-full" />
                       <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-pink-400 rounded-full" />
                     </div>
                   </div>
-
-                  {/* Shadow */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-2 bg-black/20 rounded-full blur-sm" />
                 </div>
               </motion.div>
 
-              {/* Balon di kiri atas */}
+              {/* Balloon */}
               <motion.div
                 className="absolute left-10 top-8 z-20"
                 initial={{ opacity: 0, y: -30 }}
@@ -304,18 +282,13 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 transition={{ delay: 1.6 }}
               >
                 <div className="relative">
-                  {/* Balloon */}
                   <div className="w-10 h-12 bg-gradient-to-br from-pink-400 to-pink-500 rounded-full shadow-lg" />
-
-                  {/* String */}
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-8 bg-gray-400" />
-
-                  {/* Shine */}
                   <div className="absolute top-2 left-3 w-3 h-3 bg-white/40 rounded-full" />
                 </div>
               </motion.div>
 
-              {/* Confetti di kanan atas */}
+              {/* Confetti */}
               <motion.div
                 className="absolute right-12 top-6 z-20"
                 initial={{ opacity: 0, scale: 0 }}
@@ -346,7 +319,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
             </>
           )}
 
-          {/* Checkered Floor Pattern */}
+          {/* Checkered Pattern */}
           <AnimatePresence>
             {showPhotos && (
               <motion.div
@@ -366,19 +339,17 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
           </AnimatePresence>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            {/* Birthday Cake - Simple tanpa animasi berlebihan */}
+            {/* Birthday Cake */}
             <div
               className="transform-gpu z-10"
               style={{ transformStyle: "preserve-3d" }}
             >
-              {/* Cake Shadow */}
               <div
                 className={`absolute -bottom-4 md:-bottom-8 left-1/2 transform -translate-x-1/2 ${
                   isMobile ? "w-24 h-2" : "w-32 md:w-48 h-3 md:h-4"
                 } bg-black/20 rounded-full blur-lg`}
               />
 
-              {/* Cake Base */}
               <div className="relative">
                 <div
                   className={`${
@@ -400,7 +371,6 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                   </div>
                 </div>
 
-                {/* Cake Middle Layer */}
                 <div
                   className={`${
                     isMobile
@@ -423,7 +393,6 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                   </div>
                 </div>
 
-                {/* Cake Top Layer */}
                 <div
                   className={`${
                     isMobile
@@ -436,7 +405,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 </div>
 
-                {/* Candles - Simple */}
+                {/* Candles */}
                 <div
                   className={`absolute ${
                     isMobile
@@ -508,11 +477,10 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
               )}
             </div>
 
-            {/* Photo Frames - hanya muncul setelah lilin mati */}
+            {/* Photo Frames */}
             <AnimatePresence>
               {showPhotos && (
                 <>
-                  {/* Mobile Layout */}
                   {isMobile ? (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="grid grid-cols-2 gap-3 px-4 w-full max-w-sm">
@@ -539,6 +507,11 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                                   src={message.photo}
                                   alt={`Foto dari ${message.from}`}
                                   className="w-full h-full object-cover"
+                                  onError={(e) => {
+                                    const img = e.target as HTMLImageElement;
+                                    img.src =
+                                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23ccc" width="100" height="100"/%3E%3Ctext x="50" y="50" font-size="14" fill="%23999" text-anchor="middle" dominant-baseline="middle"%3ENo Image%3C/text%3E%3C/svg%3E';
+                                  }}
                                 />
                               </div>
                             </div>
@@ -547,223 +520,61 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                       </div>
                     </div>
                   ) : (
-                    /* Desktop Layout - FRAME LEBIH BESAR */
                     <>
-                      {/* Frame 1 - Top Left - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute left-8 top-8 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: -100, y: -50 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[0].photo,
-                            frameColor: frameColors[0],
-                            from: messages[0].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[0]} rounded-2xl shadow-2xl p-4 relative`}
+                      {/* Desktop photo frames */}
+                      {messages.map((message, index) => (
+                        <motion.div
+                          key={index}
+                          className={`absolute cursor-pointer z-30 ${
+                            index === 0
+                              ? "left-8 top-8"
+                              : index === 1
+                              ? "left-40 top-6"
+                              : index === 2
+                              ? "right-40 top-6"
+                              : index === 3
+                              ? "right-8 top-8"
+                              : index === 4
+                              ? "left-8 bottom-8"
+                              : index === 5
+                              ? "left-40 bottom-6"
+                              : index === 6
+                              ? "right-40 bottom-6"
+                              : "right-8 bottom-8"
+                          }`}
+                          initial={{
+                            opacity: 0,
+                            x: index < 4 ? -100 : index > 3 ? 100 : 0,
+                            y: index % 4 === 0 ? -50 : index % 4 === 3 ? 50 : 0,
+                          }}
+                          animate={{ opacity: 1, x: 0, y: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                          onClick={() =>
+                            setZoomedPhoto({
+                              photo: message.photo,
+                              frameColor: frameColors[index],
+                              from: message.from,
+                            })
+                          }
                         >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[0].photo}
-                              alt={`Foto dari ${messages[0].from}`}
-                              className="w-full h-full object-cover"
-                            />
+                          <div
+                            className={`w-48 h-56 bg-gradient-to-br ${frameColors[index]} rounded-2xl shadow-2xl p-4 relative`}
+                          >
+                            <div className="w-full h-full bg-white rounded-xl overflow-hidden">
+                              <img
+                                src={message.photo}
+                                alt={`Foto dari ${message.from}`}
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                  const img = e.target as HTMLImageElement;
+                                  img.src =
+                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23ccc" width="100" height="100"/%3E%3Ctext x="50" y="50" font-size="14" fill="%23999" text-anchor="middle" dominant-baseline="middle"%3ENo Image%3C/text%3E%3C/svg%3E';
+                                }}
+                              />
+                            </div>
                           </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 2 - Top Center Left - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute left-40 top-6 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: -80, y: -80 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[1].photo,
-                            frameColor: frameColors[1],
-                            from: messages[1].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[1]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[1].photo}
-                              alt={`Foto dari ${messages[1].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 3 - Top Center Right - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute right-40 top-6 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: 80, y: -80 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[2].photo,
-                            frameColor: frameColors[2],
-                            from: messages[2].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[2]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[2].photo}
-                              alt={`Foto dari ${messages[2].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 4 - Top Right - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute right-8 top-8 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: 100, y: -50 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[3].photo,
-                            frameColor: frameColors[3],
-                            from: messages[3].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[3]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[3].photo}
-                              alt={`Foto dari ${messages[3].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 5 - Bottom Left - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute left-8 bottom-8 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: -80, y: 50 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.5 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[4].photo,
-                            frameColor: frameColors[4],
-                            from: messages[4].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[4]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[4].photo}
-                              alt={`Foto dari ${messages[4].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 6 - Bottom Center Left - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute left-40 bottom-6 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: -60, y: 60 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.6 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[5].photo,
-                            frameColor: frameColors[5],
-                            from: messages[5].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[5]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[5].photo}
-                              alt={`Foto dari ${messages[5].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 7 - Bottom Center Right - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute right-40 bottom-6 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: 60, y: 60 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.7 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[6].photo,
-                            frameColor: frameColors[6],
-                            from: messages[6].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[6]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[6].photo}
-                              alt={`Foto dari ${messages[6].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Frame 8 - Bottom Right - LEBIH BESAR */}
-                      <motion.div
-                        className="absolute right-8 bottom-8 cursor-pointer z-30"
-                        initial={{ opacity: 0, x: 80, y: 50 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: 0.8 }}
-                        onClick={() =>
-                          setZoomedPhoto({
-                            photo: messages[7].photo,
-                            frameColor: frameColors[7],
-                            from: messages[7].from,
-                          })
-                        }
-                      >
-                        <div
-                          className={`w-48 h-56 bg-gradient-to-br ${frameColors[7]} rounded-2xl shadow-2xl p-4 relative`}
-                        >
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden">
-                            <img
-                              src={messages[7].photo}
-                              alt={`Foto dari ${messages[7].from}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
+                        </motion.div>
+                      ))}
                     </>
                   )}
                 </>
@@ -807,7 +618,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
               )}
             </AnimatePresence>
 
-            {/* Teks "Kapan kita main bareng" - transparan seperti instruksi, hanya desktop */}
+            {/* Additional text */}
             <AnimatePresence>
               {showPhotos && !isMobile && (
                 <motion.div
@@ -826,7 +637,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
             </AnimatePresence>
           </div>
 
-          {/* Instruction for photos */}
+          {/* Instruction */}
           <AnimatePresence>
             {showPhotos && (
               <motion.div
@@ -936,7 +747,7 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
               transition={{ type: "spring", damping: 15 }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Paper texture overlay */}
+              {/* Paper texture */}
               <div
                 className="absolute inset-0 rounded-xl md:rounded-2xl opacity-30 pointer-events-none"
                 style={{
@@ -945,7 +756,6 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 }}
               />
 
-              {/* Close button */}
               <button
                 onClick={() => setShowMainMessage(false)}
                 className="absolute top-2 right-2 md:top-6 md:right-6 w-8 h-8 md:w-12 md:h-12 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors shadow-lg z-10"
@@ -953,24 +763,16 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                 <span className="text-gray-600 text-xl md:text-2xl">×</span>
               </button>
 
-              {/* Scrollable content area */}
               <div className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-16">
                 <div className="flex flex-col items-center min-h-full">
                   <div className="text-4xl md:text-7xl mb-4 md:mb-8">🎂</div>
-                  <h2
-                    className="text-2xl md:text-4xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-4 md:mb-6 text-center px-2"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
+                  <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-4 md:mb-6 text-center px-2">
                     Happy Birthday, {name}!
                   </h2>
                   <div className="w-20 h-1 md:w-32 md:h-1 bg-gradient-to-r from-pink-400 via-red-400 to-purple-400 rounded-full mb-4 md:mb-8" />
 
-                  {/* Scrollable message container */}
                   <div className="w-full max-w-2xl">
-                    <div
-                      className="text-sm md:text-lg lg:text-xl text-gray-800 leading-relaxed whitespace-pre-line px-2"
-                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                    >
+                    <div className="text-sm md:text-lg lg:text-xl text-gray-800 leading-relaxed whitespace-pre-line px-2">
                       {mainMessage.split("\n\n").map((paragraph, index) => (
                         <p key={index} className="mb-3 md:mb-4">
                           {paragraph}
@@ -979,7 +781,6 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
                     </div>
                   </div>
 
-                  {/* Scroll indicator */}
                   <div className="mt-4 md:mt-8 text-gray-500 text-xs md:text-sm animate-bounce">
                     ↓ Scroll untuk membaca lebih lanjut ↓
                   </div>
@@ -994,21 +795,8 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
         .perspective-1000 {
           perspective: 1000px;
         }
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.3s ease-out;
-        }
         
-        /* Custom scrollbar styling */
+        /* Custom scrollbar */
         .overflow-y-auto::-webkit-scrollbar {
           width: 4px;
         }
@@ -1024,7 +812,6 @@ sekali lagi happy sweet seventeen ya wish you all the best.`,
           background: #a855f7;
         }
 
-        /* Touch-friendly improvements */
         @media (max-width: 768px) {
           .cursor-pointer {
             cursor: pointer;
